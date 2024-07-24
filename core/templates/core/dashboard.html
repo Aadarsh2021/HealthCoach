@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCoach - Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Weight</th>
+            <th>Height</th>
+            <th>Steps</th>
+            <th>Calories Burned</th>
+        </tr>
+        {% for metric in metrics %}
+        <tr>
+            <td>{{ metric.date }}</td>
+            <td>{{ metric.weight }}</td>
+            <td>{{ metric.height }}</td>
+            <td>{{ metric.steps }}</td>
+            <td>{{ metric.calories_burned }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
